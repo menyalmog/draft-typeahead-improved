@@ -156,7 +156,6 @@ export default class DraftTypeahead extends Editor {
       if (this.props.handleTypeaheadReturn) {
         const selectionState = this.props.editorState.getSelection();
         const entitySelection = selectionState.merge({
-          focusOffset: selectionState.getFocusOffset(),
           anchorOffset: selectionState.getFocusOffset() - this.typeaheadState.text.length
         });
 
